@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!--Add metatags-->
+    <title>Contatos | José Garcês - Software Developer & UI Designer</title>
+</head>
+
+<body>
+    <!--Responsive Header-->
+    <header>
+        <a href="index.html">
+            <div class="logo">
+                <h1 class="title">José Garcês</h1>
+                <h3 class="subtitle">DEVELOPER & UI DESIGNER</h3>
+            </div>
+        </a>
+        <nav id="nav">
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false">Menu
+                <span id="hamburger"></span>
+            </button>
+            <ul id="menu" role="menu">
+                <li><a href="index.html">Portfólio</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a class="active" href="contact.html">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!--Back to Top Button-->
+        <button class="scroll-btn" id="scrollTopBtn" title="Ir Para o Topo" onclick="toTopFunction()"><img
+                src="assets/scroll-btn-arrow.svg" alt="scroll-btn-arrow.svg"></button>
+
+        <!--Get in Touch-->
+        <section class="contact-main">
+            <section class="left">
+                <h3 class="subtitle">CONTATO</h3>
+                <h1 class="title">Entre em contato — Vamos trabalhar juntos.</h1>
+
+                <div class="social-medias">
+                    <a href="https://www.linkedin.com/in/garc%C3%AAs-neto/" target="_blank" rel="noopener noferrer">
+                        <img src="assets/linkedin-logo.svg" alt="linkedin-logo.svg">
+                    </a>
+                    <a href="https://github.com/jGar6z" target="_blank" rel="noopener noferrer">
+                        <img src="assets/github-logo.svg" alt="github-logo.svg">
+                    </a>
+                    <a href="https://www.instagram.com/jgar6_/" target="_blank" rel="noopener noferrer">
+                        <img src="assets/instagram-logo.svg" alt="instagram-logo.svg">
+                    </a>
+                </div>
+
+                <div class="contact-info">
+                    <img src="assets/mail-icon.svg" alt="mail-icon.svg">
+                    <p>garces.neto2020@gmail.com</p>
+                </div>
+                <div class="contact-info">
+                    <img src="assets/phone-icon.svg" alt="phone-icon.svg">
+                    <p>+55 (41) 99190 - 5209</p>
+                </div>
+            </section>
+
+            <section class="right">
+                <h3 class="text">Você tem um projeto? Entre em contato comigo via email e vamos discutir a respeito. Conte-me também detalhes sobre seu projeto.</h3>
+                <form action="https://formsubmit.co/garces.neto2020@gmail.com" method="POST">
+                    <div class="section">
+                        <div class="field">
+                            <label class="title">Seu Nome</label>
+                            <input type="text" name="name" placeholder="Qual o seu nome?" id="name" class="text-field" required>
+                        </div>
+
+                        <div class="field">
+                            <label class="title">Seu Email</label>
+                            <input type="email" name="email" placeholder="Qual o seu email?" id="email" class="text-field" required>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="field">
+                            <label class="title">Serviço</label>
+                            <select name="service" class="select-field" required>
+                                <option selected disabled value="">Qual o seu interesse?</option>
+                                <option value="service-1">Criação de site</option>
+                                <option value="service-2">Criação de aplicativo móvel</option>
+                                <option value="service-3">Criação de design</option>
+                                <option value="service-4">Apenas dizendo um oi</option>
+                                <option value="service-5">Outro assunto</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label class="title">Orçamento</label>
+                            <select name="budget" class="select-field" required>
+                                <option selected disabled value="">Qual é o seu orçamento?</option>
+                                <option value="budget-1">Abaixo de R$1000</option>
+                                <option value="budget-2">Entre R$1000 e R$2500</option>
+                                <option value="budget-3">Entre R$2500 e R$5000</option>
+                                <option value="budget-4">Entre R$5000 e R$10000</option>
+                                <option value="budget-5">Acima de R$10000</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="field message">
+                            <label class="title">Mensagem</label>
+                            <textarea name="message" placeholder="Escreva sua mensagem aqui" id="message" class="text-field" required></textarea>
+                        </div>
+                    </div>
+
+                    <button id="send-btn" type="submit" value="send" onclick="validateEmail(email)">
+                        <img src="assets/mail-icon.svg" alt="mail-icon.svg">
+                        <p>Enviar mensagem</p>
+                    </button>
+                </form>
+            </section>
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="grid principal">
+            <a href="index.html">
+                <div class="logo">
+                    <h1 class="title">José Garcês</h1>
+                    <h3 class="subtitle">DEVELOPER & UI DESIGNER</h3>
+                </div>
+            </a>
+
+            <div class="social-medias">
+                <h2 class="title">Siga-me nas redes sociais</h2>
+                <a href="https://www.linkedin.com/in/garc%C3%AAs-neto/" target="_blank" rel="noopener noferrer">
+                    <img src="assets/linkedin-logo.svg" alt="linkedin-logo.svg">
+                </a>
+                <a href="https://github.com/jGar6z" target="_blank" rel="noopener noferrer">
+                    <img src="assets/github-logo.svg" alt="github-logo.svg">
+                </a>
+                <a href="https://www.instagram.com/jgar6_/" target="_blank" rel="noopener noferrer">
+                    <img src="assets/instagram-logo.svg" alt="instagram-logo.svg">
+                </a>
+            </div>
+
+            <div class="principal-copyright">
+                <h4 class="text">© 2022 Todos os direitos reservados.</h4>
+                <h4 class="text" style="color: #000;">José Garcês</h4>
+            </div>
+        </div>
+
+        <div class="grid">
+            <h2 class="title">Últimos Projetos</h2>
+            <a class="text hover" href="project/compro-ouro-sjp.html">Compro Ouro SJP</a>
+            <a class="text hover" href="./project/restaurante.html">Restaurante</a>
+        </div>
+
+        <div class="grid">
+            <h2 class="title">Menu</h2>
+            <a class="text hover" href="index.html">Portfólio</a>
+            <a class="text hover" href="about.html">Sobre</a>
+            <a class="text hover" href="contact.html">Contatos</a>
+        </div>
+
+        <div class="grid contact">
+            <h2 class="title">Informações de contato</h2>
+            <p class="text">Sinta-se a vontade para entrar em contato comigo a qualquer hora. Assim que receber sua mensagem retornarei o quanto antes.</p>
+            <div class="contact-info">
+                <img src="assets/mail-icon.svg" alt="mail-icon.svg">
+                <p>garces.neto2020@gmail.com</p>
+            </div>
+            <div class="contact-info">
+                <img src="assets/phone-icon.svg" alt="phone-icon.svg">
+                <p>+55 (41) 99190 - 5209</p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <h4 class="text">© 2022 Todos os direitos reservados.</h4>
+            <h4 class="text" style="color: #000;">José Garcês</h4>
+        </div>
+    </footer>
+
+    <!--Script.js Reference-->
+    <script src="script.js"></script>
+</body>
+
+</html>

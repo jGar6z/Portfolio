@@ -1,0 +1,1273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: #000;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+/*Header*/
+
+header {
+    z-index: 999;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    padding: 20px 50px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.6) 95%, rgba(255, 255, 255, 0) 100%);
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo .title {
+    font-size: 28px;
+    padding: 0;
+    letter-spacing: 1px;
+}
+
+.logo .subtitle {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+header #menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header #menu a {
+    position: relative;
+    font-weight: 500;
+    font-size: 18px;
+    color: #878a8f;
+    margin: 0 1vw;
+    padding: 0 10px;
+}
+
+header #menu a.active {
+    color: #000;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+/*Mail Button*/
+.mail-btn {
+    z-index: 99;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 15px;
+    bottom: 30px;
+    left: 30px;
+    height: 50px;
+    width: 50px;
+    padding: 20px;
+    background-color: #878a8f;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.mail-btn p {
+    margin-left: 15px;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s linear;
+    transition-delay: 0.2s;
+}
+
+.mail-btn img {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 12px;
+}
+
+.mail-btn:hover img {
+    content: url(../assets/mail-open-icon.svg);
+}
+
+/*Scroll to Top Button*/
+.scroll-btn {
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #878a8f;
+
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+}
+
+.scroll-btn img {
+    height: 20px;
+    width: 20px;
+}
+
+/*Main Content*/
+.main {
+    background-image: url(../assets/main-img.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100vw;
+    height: 120vh;
+}
+
+.main .main-text {
+    width: 50%;
+    padding-top: 300px;
+    padding-left: 72px;
+}
+
+.subtitle {
+    font-weight: 300;
+    font-size: 20px;
+    color: #878a8f;
+    letter-spacing: 4px;
+}
+
+.title {
+    padding: 15px 0;
+    font-weight: 700;
+    font-size: 62px;
+}
+
+.text {
+    color: #878a8f;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.main-text .btns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.main-text a {
+    font-weight: 700;
+    font-size: 18px;
+    position: relative;
+}
+
+/*Portfolio*/
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    margin: 0 72px 28px 72px;
+    gap: 62px;
+}
+
+.portfolio .section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 28px 0;
+}
+
+.portfolio .section .container {
+    width: 600px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    padding: 38px;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.portfolio .section .container::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: 2s;
+}
+
+.portfolio .section .container:hover::before {
+    filter: blur(3px) brightness(40%);
+    transition-timing-function: ease-in-out;
+    transition: 2s;
+}
+
+/*Compro Ouro SJP*/
+.portfolio .section .compro-ouro-sjp::before {
+    background-image: url(../assets/project-compro-ouro-sjp/container-bg.jpg);
+    filter: brightness(50%);
+}
+
+/*Restaurante*/
+.portfolio .section .restaurante::before {
+    background-image: url(../assets/project-restaurante/img-1.jpg);
+    filter: brightness(50%);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.portfolio .container .year {
+    font-weight: 400;
+    font-size: 20px;
+    color: #878a8f;
+}
+
+.portfolio .container .title {
+    font-weight: 700;
+    font-size: 38px;
+    color: #fff;
+}
+
+.portfolio .container .subtitle {
+    color: #fff;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.portfolio .container a {
+    width: max-content;
+    padding: 10px;
+    padding-left: 0;
+}
+
+.portfolio .container .call-action {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    opacity: 0;
+    transition: 0.5s linear;
+}
+
+.portfolio .container .call-action .text {
+    font-size: 16px;
+}
+
+.portfolio .container .call-action img {
+    width: 20px;
+    filter: invert(50%);
+    margin-left: 5px;
+}
+
+/*Quick Contact*/
+.quick-call {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 72px 0;
+}
+
+.quick-call .subtitle {
+    font-size: 18px;
+}
+
+.quick-call .title {
+    padding: 10px 0;
+    font-size: 52px;
+    position: relative;
+}
+
+/*Projects Page*/
+
+.project-page {
+    display: flex;
+    flex-direction: column;
+    margin: 132px 48px;
+}
+
+.project-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.project .left {
+    width: 40%;
+}
+
+.project .left .text {
+    color: #000;
+}
+
+.project .title {
+    padding-top: 0;
+    margin-bottom: -15px;
+}
+
+.project .subtitle {
+    padding: 25px 0px 10px 0;
+    font-size: 18px;
+}
+
+.project p {
+    padding: 4px 0;
+}
+
+.project .right {
+    width: 50%;
+    text-align: justify;
+}
+
+.project .right .text {
+    padding-bottom: 15px;
+}
+
+/*Project Page Images*/
+.project-page .images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
+    margin: 72px 0;
+}
+
+.project-page .images img {
+    width: 100%;
+}
+
+/*Project Page Testimonial*/
+.project-page .testimonial {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+    margin: 28px auto;
+}
+
+.project-page .testimonial .title {
+    font-size: 28px;
+}
+
+.project-page .quick-call {
+    margin-bottom: 0;
+    padding-top: 72px;
+    border-top: 0.6px solid #878a8f;
+}
+
+/*About Page*/
+/*About Page About Me*/
+.about-page {
+    margin: 138px 48px;
+}
+
+.about-page .subtitle {
+    font-size: 18px;
+}
+
+.about-page .about-me {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 60%;
+    margin: 28px auto;
+}
+
+.about-page .about-me .title {
+    font-size: 28px;
+}
+
+/*About Page Services & Tools*/
+.about-page .services-tools {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 72px 0;
+}
+
+.about-page .services-tools .service {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+.about-page .services-tools p {
+    text-align: center;
+}
+
+.about-page .services-tools .types {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.about-page .services-tools .bar {
+    color: #878a8f;
+    opacity: 0.8;
+}
+
+/*About Page Quick Contact*/
+.about-page .quick-call {
+    padding-top: 132px;
+    border-top: 0.6px solid #878a8f;
+}
+
+/*Contact Page*/
+
+.contact-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 132px 62px;
+}
+
+/*Contact Page Left Side*/
+
+.contact-main .left .subtitle {
+    font-size: 18px;
+}
+
+.contact-main .left .title {
+    font-size: 38px;
+}
+
+.contact-main .left {
+    width: 40%;
+}
+
+.contact-main .social-medias img {
+    width: 30px;
+    margin-right: 8px;
+    margin-bottom: 10px;
+}
+
+.contact-main .social-medias img:hover {
+    filter: invert(30%);
+}
+
+/*Contact Page Right Side*/
+
+.contact-main .right {
+    width: 55%;
+}
+
+.contact-main .right .text {
+    padding-bottom: 20px;
+}
+
+.contact-main .right .title {
+    font-weight: 500;
+    font-size: 16px;
+    color: #878a8f;
+    padding-left: 5px;
+}
+
+.contact-main .right .section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.contact-main .right .field {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.contact-main .right .text-field {
+    height: 40px;
+    color: #000;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    padding-left: 5px;
+    border: none;
+    outline: 0;
+    border-bottom: 0.6px solid #000;
+}
+
+.contact-main .right .select-field {
+    height: 40px;
+    border-radius: 5px;
+    border: 0.6px solid #878a8f;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #878a8f;
+}
+
+.contact-main .right .select-field option {
+    color: #000;
+}
+
+.contact-main .right .select-field:hover {
+    background-color: rgba(135, 138, 143, 0.2);
+}
+
+.contact-main .right .message {
+    width: 100%;
+}
+
+.contact-main .right #message {
+    width: 100%;
+}
+
+.contact-main .right #send-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #000;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.contact-main .right #send-btn img {
+    width: 35px;
+}
+
+.contact-main .right #send-btn:hover img {
+    content: url(../assets/mail-open-icon.svg);
+}
+
+/*Footer*/
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 0.6px solid #878a8f;
+    margin: 72px 28px;
+    padding: 28px;
+}
+
+footer .title {
+    font-weight: 600;
+    font-size: 20px;
+    color: #000;
+}
+
+footer .text {
+    font-weight: 500;
+    font-size: 14px;
+    color: #878a8f;
+}
+
+footer .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 25%;
+}
+
+footer .grid .text {
+    font-size: 16px;
+}
+
+footer .hover {
+    width: max-content;
+}
+
+footer .hover:hover {
+    color: #000;
+}
+
+footer .principal {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+footer .principal .logo .title {
+    font-weight: 700;
+    font-size: 28px;
+}
+
+footer .copyright {
+    margin-top: 15px;
+    display: none;
+}
+
+footer .copyright .text {
+    font-size: 14px;
+}
+
+footer .contact .text {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.contact-info img {
+    width: 25px;
+}
+
+footer .social-medias img {
+    width: 30px;
+    margin-right: 5px;
+    filter: invert(50%);
+}
+
+/*Responsive PC*/
+
+@media screen and (min-width:1024px) {
+
+    /*Header*/
+    header #menu a::after {
+        content: "";
+        position: absolute;
+        background-color: #000;
+        height: 2px;
+        width: 0;
+        left: 0;
+        bottom: -10px;
+        transition: 0.4s;
+    }
+
+    header #menu a:hover {
+        color: #000;
+    }
+
+    header #menu a:hover::after {
+        width: 100%;
+    }
+
+    /*Mail Button*/
+    .mail-btn:hover {
+        width: 250px;
+    }
+    
+    .mail-btn:hover p {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /*Main*/
+    .main-text a::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        bottom: -5px;
+        width: 100%;
+        left: 0;
+        background-color: #000;
+        transition: 0.3s;
+        transform: scale(0);
+    }
+
+    .main-text a:hover::after {
+        transform: scale(1);
+    }
+
+    /*Portfolio*/
+    .portfolio .container:hover .call-action {
+        opacity: 1;
+        animation: call-action 1s;
+        animation-duration: 1s;
+        position: relative;
+    }
+    
+    @keyframes call-action {
+        from {
+            left: -50px;
+        }
+    
+        to {
+            left: 0px;
+        }
+    }
+
+    /*Quick Contact*/
+    .quick-call .title::after {
+        content: "";
+        position: absolute;
+        background-color: #000;
+        height: 5px;
+        width: 0;
+        left: 0;
+        bottom: 0;
+        transition: 0.4s;
+    }
+    
+    .quick-call .title:hover::after {
+        width: 100%;
+    }
+
+    /*About Page Services & Tools*/
+    .about-page .services-tools .service {
+        width: 30%;
+    }
+
+    /*Footer*/
+    footer .social-medias img:hover {
+        filter: none;
+        transition: 250ms linear;
+    }
+}
+
+/*Responsive Tablet*/
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+    /*Header*/
+    header #menu a {
+        font-size: 20px;
+    }
+
+    /*Main*/
+    .subtitle {
+        font-size: 22px;
+    }
+
+    .main {
+        height: 60vh;
+        background-size: 120%;
+        background-position-y: 10px;
+    }
+
+    .main .main-text {
+        width: 80%;
+        padding-left: 42px;
+    }
+
+    .main-text .title {
+        font-size: 52px;
+    }
+
+    .main-text .text {
+        font-size: 22px;
+    }
+
+    .main-text a {
+        font-size: 24px;
+    }
+
+    /*Portfolio*/
+    .portfolio {
+        margin: 38px;
+        margin-top: 72px;
+    }
+
+    .portfolio .section .container {
+        width: 350px;
+        height: 550px;
+    }
+
+    .portfolio .section .container::before {
+        background-size: contain;
+    }
+
+    /*Quick Contact*/
+    .quick-call .subtitle{
+        font-size: 20px;
+    }
+
+    /*About Me*/
+    .about-page .about-me {
+        width: 80%;
+    }
+
+    /*About Page About Me*/
+    .about-page .subtitle {
+        font-size: 20px;
+    }
+
+    .about-page .about-me .title {
+        font-size: 26px;
+    }
+
+    /*About Page Services & Tools*/
+    .about-page .services-tools {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .about-page .services-tools .service {
+        width: 60%;
+    }
+
+    /*Contact Page*/
+    .contact-main {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .contact-main .subtitle {
+        font-size: 22px;
+    }
+
+    /*Contact Page Left*/
+    .contact-main .left {
+        width: 100%;
+    }
+
+    .contact-main .left .social-medias img {
+        width: 40px;
+    }
+
+    .contact-main .left p {
+        font-size: 20px;
+    }
+
+    /*Contact Page Right*/
+    .contact-main .right {
+        width: 100%;
+    }
+
+    .contact-main .right .text {
+        font-size: 22px;
+    }
+
+    .contact-main .right .title {
+        font-size: 18px;
+    }
+
+    .contact-main .right .text-field {
+        font-size: 18px;
+    }
+
+    .contact-main .right #send-btn p {
+        font-size: 20px;
+    }
+
+    /*Projects Page*/
+    .project-page .subtitle{
+        font-size: 22px;
+    }
+
+    .project-page .text {
+        font-size: 20px;
+    }
+
+    .project-page p {
+        font-size: 18px;
+    }
+
+    /*Project Page Project Main*/
+    .project-page .project-main {
+        flex-direction: column;
+    }
+
+    .project-page .project-main .left {
+        width: 100%;
+    }
+
+    .project-page .project-main .right {
+        width: 100%;
+    }
+ 
+    /*Project Page Testimonial*/
+    .project-page .testimonial {
+        width: 80%;
+        gap: 10px;
+    }
+
+    /*Footer*/
+    footer {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    footer .grid {
+        width: 30%;
+    }
+
+    footer .contact {
+        margin-top: 28px;
+    }
+    footer .contact .text {
+        font-size: 16px;
+    }
+    footer .text {
+        font-size: 18px;
+    }
+    footer .copyright {
+        width: 100%;
+        margin-top: 40px;
+    }
+    footer .principal-copyright {
+        display: none;
+    }
+}
+
+/*Responsive Smartphone*/
+
+@media (max-width: 767px) {
+
+    /*Header*/
+    header .logo .title {
+        font-size: 26px;
+    }
+
+    header .logo .subtitle {
+        font-size: 13px;
+    }
+
+    header {
+        box-sizing: border-box;
+        height: 70px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        justify-content: space-between;
+    }
+
+    header #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0;
+        left: 0;
+        background: #fff;
+        border-top: 0.4px solid #878a8f;
+        transition: 0.6s;
+        z-index: 10000;
+        height: 0;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav.active #menu {
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    header #menu a {
+        display: block;
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 0.4px solid #878a8f;
+    }
+
+    header #btn-mobile {
+        color: #000;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+    }
+
+    #btn-mobile {
+        display: flex;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 0.5rem;
+    }
+
+    #hamburger {
+        border-top: 2px solid;
+        width: 20px;
+    }
+
+    #hamburger::after,
+    #hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: 0.3s;
+        position: relative;
+    }
+
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    /*Main*/
+    .main {
+        background-image: url(../assets/main-img-mobile.jpg);
+        background-size: 150%;
+        background-position-y: -20px;
+        height: 60vh;
+    }
+
+    .main .main-text {
+        padding: 280px 28px 0 28px;
+        width: 100%;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .title {
+        font-size: 34px;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    /*Portfolio*/
+    .portfolio {
+        margin: 72px 28px;
+    }
+
+    .portfolio .section {
+        flex-direction: column;
+    }
+
+    .portfolio .section .container {
+        width: calc(100vw - 56px);
+        height: 480px;
+        padding: 30px;
+    }
+
+    .portfolio .section .container::before {
+        background-size: contain;
+    }
+
+    .portfolio .container .title {
+        font-size: 32px;
+    }
+
+    .portfolio .container .subtitle {
+        font-size: 20px;
+    }
+
+    /*Quick Contact*/
+    .quick-call {
+        text-align: center;
+        margin: 72px 28px;
+    }
+
+    .quick-call .subtitle {
+        font-size: 16px;
+    }
+
+    .quick-call .title {
+        font-size: 32px;
+    }
+
+    /*Projects Page*/
+    .project-page {
+        margin: 72px 28px;
+    }
+
+    /*Project Page Project Main*/
+    .project-page .project-main {
+        flex-direction: column;
+    }
+
+    .project-page .project-main .left {
+        width: 100%;
+    }
+
+    .project-page .left .text {
+        font-size: 18px;
+    }
+
+    .project-page .project-main .right {
+        width: 100%;
+    }
+
+    /*Project Page Testimonial*/
+    .project-page .testimonial {
+        width: 100%;
+    }
+
+    .project-page .testimonial .title {
+        font-size: 20px;
+    }
+
+    /*About Page*/
+    .about-page {
+        margin: 72px 28px;
+    }
+    /*About Page About Me*/
+    .about-page .about-me {
+        margin-top: 120px;
+        width: 100%;
+    }
+
+    .about-page .about-me .title {
+        font-size: 20px;
+    }
+
+    /*About Page Services & Tools*/
+    .about-page .services-tools {
+        flex-direction: column;
+        gap: 62px;
+    }
+
+    /*About Page Quick Call*/
+    .about-page .quick-call {
+        padding-top: 72px;
+    }
+
+    /*Contact Page*/
+    .contact-main {
+        flex-direction: column;
+        margin: 72px 28px;
+        margin-top: 92px;
+        gap: 50px;
+    }
+
+    /*Contact Page Left*/
+    .contact-main .left {
+        width: 100%;
+    }
+
+    .contact-main .left .title {
+        font-size: 28px;
+    }
+
+    .contact-main .left p {
+        font-size: 18px;
+    }
+
+    /*Contact Page Right*/
+    .contact-main .right {
+        width: 100%;
+    }
+
+    .contact-main .right .text {
+        font-size: 20px;
+    }
+
+    .contact-main .right .section {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .contact-main .right .field {
+        width: 100%;
+    }
+
+    .contact-main .right #send-btn {
+        margin: 20px 10px;
+    }
+
+    /*Footer*/
+    footer {
+        flex-direction: column;
+        padding: 10px;
+        margin-bottom: 82px;
+    }
+    footer .logo {
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    footer .title {
+        font-size: 22px;
+    }
+    footer .text {
+        font-size: 18px;
+    }
+    footer .principal .logo .title {
+        font-size: 34px;
+    }
+    footer .principal .logo .subtitle {
+        font-size: 18px;
+    }
+    footer .principal-copyright {
+        display: none;
+    }
+    footer .social-medias {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    footer .social-medias img {
+        width: 40px;
+        margin: 0 5px;
+    }
+    footer .social-medias .title {
+        display: none;
+    }
+    footer .grid {
+        width: 100%;
+        margin: 20px 0;
+        align-items: center;
+    }
+    footer .contact {
+        align-items: flex-start;
+    }
+    footer .contact .text {
+        font-size: 18px;
+    }
+    footer .contact img {
+        width: 30px;
+    }
+    footer .contact p {
+        font-size: 18px;
+    }
+    footer .copyright {
+        margin-top: 30px;
+        text-align: right;
+    }
+    footer .copyright .text {
+        font-size: 16px;
+    }
+}

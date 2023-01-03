@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <!--Add metatags-->
+        <title>Portfólio | José Garcês - Software Developer & UI Designer</title>
+    </head>
+
+    <body>
+        <!--Responsive Header-->
+        <header>
+            <a href="index.html">
+                <div class="logo">
+                    <h1 class="title">José Garcês</h1>
+                    <h3 class="subtitle">DEVELOPER & UI DESIGNER</h3>
+                </div>
+            </a>
+            <nav id="nav">
+                <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
+                    <span id="hamburger"></span>
+                </button>
+                <ul id="menu" role="menu">
+                    <li><a class="active" href="#portfolio">Portfólio</a></li>
+                    <li><a href="about.html">Sobre</a></li>
+                    <li><a href="contact.html">Contatos</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!--Mail Button-->
+            <a href="contact.html">
+                <div class="mail-btn">
+                    <img src="assets/mail-icon.svg" alt="mail-icon.svg">
+                    <p>Entre em contato</p>
+                </div>
+            </a>
+
+            <!--Back to Top Button-->
+            <button class="scroll-btn" id="scrollTopBtn" title="Ir Para o Topo" onclick="toTopFunction()"><img src="assets/scroll-btn-arrow.svg" alt="scroll-btn-arrow.svg"></button>
+
+            <!--Main Content-->
+            <section class="main">
+                <div class="main-text">
+                    <h3 class="subtitle">JOSÉ GARCÊS</h3>
+                    <h1 class="title">Software Developer and UI Designer</h1>
+                    <h3 class="text">Sou um Desenvolvedor Front-end e Designer, trabalho no mercado como Freelancer desde 2022, apaixonado por Softwares e tecnologias. Formado pelo Instituto Federal da Bahia.</h3>
+                    <div class="btns">
+                        <a href="#portfolio">Ver Projetos</a>
+                        <p>ou</p>
+                        <a href="about.html">Leia Sobre Mim</a>
+                    </div>
+                </div>
+            </section>
+
+            <!--Portfolio-->
+            <section class="portfolio">
+                <!--Web Development-->
+                <section>
+                    <h3 class="subtitle">PROJETOS E ESTUDOS DE CASO</h3>
+                    <h1 class="title">Desenvolvimento Web</h1>
+                    <div class="section web">
+                        <!--Compro Ouro SJP-->
+                        <a href="project/compro-ouro-sjp.html">
+                            <div class="container compro-ouro-sjp">
+                                <h3 class="year">2 0 2 2</h3>
+                                <h1 class="title">Compro Ouro SJP</h1>
+                                <h2 class="subtitle">Design Responsivo</h2>
+                                <div class="call-action">
+                                    <h4 class="text">Confira esse projeto</h4>
+                                    <img src="assets/arrow-forward.svg" alt="arrow-forward.svg">
+                                </div>
+                            </div>
+                        </a>
+
+
+                        <!--Restaurante-->
+                        <a href="project/restaurante.html">
+                            <div class="container restaurante">
+                                <h3 class="year">2 0 2 2</h3>
+                                <h1 class="title">Restaurante</h1>
+                                <h2 class="subtitle">Design Responsivo</h2>
+                                <div class="call-action">
+                                    <h4 class="text">Confira esse projeto</h4>
+                                    <img src="assets/arrow-forward.svg" alt="arrow-forward.svg">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!--Design Projects-->
+                <section>
+                    <h3 class="subtitle">UI & BRANDING DESIGNS</h3>
+                    <h1 class="title">UI Design</h1>
+                </section>
+            </section>
+
+            <!--Quick Contact-->
+            <div class="quick-call">
+                <h3 class="subtitle">PRECISA DE UM DESENVOLVEDOR / DESIGNER?</h3>
+                <a href="contact.html">
+                    <h1 class="title">Vamos Trabalhar Juntos</h1>
+                </a>
+            </div>
+        </main>
+
+        <!--Footer-->
+        <footer>
+            <div class="grid principal">
+                <a href="index.html">
+                    <div class="logo">
+                        <h1 class="title">José Garcês</h1>
+                        <h3 class="subtitle">DEVELOPER & UI DESIGNER</h3>
+                    </div>
+                </a>
+    
+                <div class="social-medias">
+                    <h2 class="title">Siga-me nas redes sociais</h2>
+                    <a href="https://www.linkedin.com/in/garc%C3%AAs-neto/" target="_blank" rel="noopener noferrer">
+                        <img src="assets/linkedin-logo.svg" alt="linkedin-logo.svg">
+                    </a>
+                    <a href="https://github.com/jGar6z" target="_blank" rel="noopener noferrer">
+                        <img src="assets/github-logo.svg" alt="github-logo.svg">
+                    </a>
+                    <a href="https://www.instagram.com/jgar6_/" target="_blank" rel="noopener noferrer">
+                        <img src="assets/instagram-logo.svg" alt="instagram-logo.svg">
+                    </a>
+                </div>
+    
+                <div class="principal-copyright">
+                    <h4 class="text">© 2022 Todos os direitos reservados.</h4>
+                    <h4 class="text" style="color: #000;">José Garcês</h4>
+                </div>
+            </div>
+    
+            <div class="grid">
+                <h2 class="title">Últimos Projetos</h2>
+                <a class="text hover" href="project/compro-ouro-sjp.html">Compro Ouro SJP</a>
+                <a class="text hover" href="./project/restaurante.html">Restaurante</a>
+            </div>
+    
+            <div class="grid">
+                <h2 class="title">Menu</h2>
+                <a class="text hover" href="index.html">Portfólio</a>
+                <a class="text hover" href="about.html">Sobre</a>
+                <a class="text hover" href="contact.html">Contatos</a>
+            </div>
+    
+            <div class="grid contact">
+                <h2 class="title">Informações de contato</h2>
+                <p class="text">Sinta-se a vontade para entrar em contato comigo a qualquer hora. Assim que receber sua mensagem retornarei o quanto antes.</p>
+                <div class="contact-info">
+                    <img src="assets/mail-icon.svg" alt="mail-icon.svg">
+                    <p>garces.neto2020@gmail.com</p>
+                </div>
+                <div class="contact-info">
+                    <img src="assets/phone-icon.svg" alt="phone-icon.svg">
+                    <p>+55 (41) 99190 - 5209</p>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <h4 class="text">© 2022 Todos os direitos reservados.</h4>
+                <h4 class="text" style="color: #000;">José Garcês</h4>
+            </div>
+        </footer>
+        
+        <!--Script.js Reference-->
+        <script src="script.js"></script>
+    </body>
+</html>
