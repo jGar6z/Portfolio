@@ -364,6 +364,28 @@ header #menu a.active {
     padding-bottom: 15px;
 }
 
+.project .right .github {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.project .right .github-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.project .right .github-btn img {
+    width: 60px;
+}
+
+.project .right .github-btn .title {
+    font-size: 28px;
+}
+
 /*Project Page Images*/
 .project-page .images {
     display: flex;
