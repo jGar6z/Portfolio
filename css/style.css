@@ -159,7 +159,7 @@ header #menu a.active {
 
 .main .main-text {
     width: 50%;
-    padding-top: 300px;
+    padding-top: 250px;
     padding-left: 72px;
 }
 
@@ -234,28 +234,22 @@ header #menu a.active {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: 2s;
+    transition: 0.5s ease-in-out;
 }
 
 .portfolio .section .container:hover::before {
     filter: blur(3px) brightness(40%);
-    transition-timing-function: ease-in-out;
-    transition: 2s;
 }
 
 /*Compro Ouro SJP*/
+
 .portfolio .section .compro-ouro-sjp::before {
     background-image: url(../assets/project-compro-ouro-sjp/container-bg.jpg);
-    filter: brightness(50%);
 }
 
 /*Restaurante*/
 .portfolio .section .restaurante::before {
-    background-image: url(../assets/project-restaurante/img-1.jpg);
-    filter: brightness(50%);
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
+    background-image: url(../assets/project-restaurante/container-bg.jpg);
 }
 
 .portfolio .container .year {
@@ -298,6 +292,26 @@ header #menu a.active {
     width: 20px;
     filter: invert(50%);
     margin-left: 5px;
+}
+
+/*Portfolio Social Media Designs*/
+.portfolio .design {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 72px 0;
+}
+
+.portfolio .design img {
+    width: 400px;
+    transition: 0.5s;
+}
+
+.portfolio .design img:hover {
+    transform: scale(1.03);
 }
 
 /*Quick Contact*/
@@ -376,10 +390,11 @@ header #menu a.active {
     flex-direction: row;
     align-items: center;
     gap: 15px;
+    margin-top: 10px;
 }
 
 .project .right .github-btn img {
-    width: 60px;
+    width: 50px;
 }
 
 .project .right .github-btn .title {
