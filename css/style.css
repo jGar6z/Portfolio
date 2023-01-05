@@ -378,14 +378,18 @@ header #menu a.active {
     padding-bottom: 15px;
 }
 
-.project .right .github {
+.project .right .github, .project .right .website {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
 }
 
-.project .right .github-btn {
+.project .right .website .title {
+    position: relative;
+}
+
+.project .right .call {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -393,11 +397,11 @@ header #menu a.active {
     margin-top: 10px;
 }
 
-.project .right .github-btn img {
+.project .right .call img {
     width: 50px;
 }
 
-.project .right .github-btn .title {
+.project .right .call .title {
     font-size: 28px;
 }
 
