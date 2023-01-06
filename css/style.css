@@ -105,10 +105,6 @@ header #menu a.active {
     left: 12px;
 }
 
-.mail-btn:hover img {
-    content: url(../assets/mail-open-icon.svg);
-}
-
 /*Scroll to Top Button*/
 .scroll-btn {
     z-index: 99;
@@ -310,10 +306,6 @@ header #menu a.active {
     transition: 0.5s;
 }
 
-.portfolio .design img:hover {
-    transform: scale(1.03);
-}
-
 /*Quick Contact*/
 .quick-call {
     display: flex;
@@ -489,6 +481,30 @@ header #menu a.active {
 .about-page .services-tools .bar {
     color: #878a8f;
     opacity: 0.8;
+}
+
+/*About Page Works*/
+.about-page .works {
+    display: flex;
+    flex-direction: column;
+    margin: 100px 32px;
+    gap: 15px;
+}
+
+.about-page .works .works-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.about-page .works .works-line p {
+    color: #878a8f;
+    font-weight: 500;
+    width: 100%;
+}
+
+.about-page .works .works-line .black {
+    color: #000;
 }
 
 /*About Page Quick Contact*/
@@ -739,6 +755,10 @@ footer .social-medias img {
         visibility: visible;
         opacity: 1;
     }
+    
+    .mail-btn:hover img {
+        content: url(../assets/mail-open-icon.svg);
+    }
 
     /*Main*/
     .main-text a::after {
@@ -763,6 +783,11 @@ footer .social-medias img {
         animation: call-action 1s;
         animation-duration: 1s;
         position: relative;
+    }
+
+    /*Porfolio Design*/
+    .portfolio .design img:hover {
+        transform: scale(1.03);
     }
     
     @keyframes call-action {
@@ -796,6 +821,16 @@ footer .social-medias img {
         width: 30%;
     }
 
+    /*About Page Works*/
+    .about-page .works .works-line .black {
+        width: 60%;
+    }
+    
+    .about-page .works .works-line .last {
+        text-align: end;
+        width: 50%;
+    }
+
     /*Footer*/
     footer .social-medias img:hover {
         filter: none;
@@ -817,7 +852,7 @@ footer .social-medias img {
     }
 
     .main {
-        height: 60vh;
+        height: auto;
         background-size: 120%;
         background-position-y: 10px;
     }
@@ -846,12 +881,24 @@ footer .social-medias img {
     }
 
     .portfolio .section .container {
-        width: 350px;
-        height: 550px;
+        width: 320px;
+        height: 420px;
     }
 
     .portfolio .section .container::before {
         background-size: contain;
+    }
+
+    /*Portfolio Design*/
+    .portfolio .design {
+        gap: 0;
+        margin: 72px 0;
+        align-items: center;
+    }
+
+    .portfolio .design img {
+        max-width: 340px;
+        padding: 20px;
     }
 
     /*Quick Contact*/
@@ -881,6 +928,25 @@ footer .social-medias img {
 
     .about-page .services-tools .service {
         width: 60%;
+    }
+
+    /*About Page Works*/
+    .about-page .works {
+        margin: 100px 20px;
+    }
+
+    .about-page .works-line {
+        gap: 30px;
+    }
+
+    .about-page .works .works-line .black {
+        color: #000;
+        width: 50%;
+    }
+    
+    .about-page .works .works-line .last {
+        text-align: end;
+        width: 50%;
     }
 
     /*Contact Page*/
@@ -989,7 +1055,6 @@ footer .social-medias img {
 /*Responsive Smartphone*/
 
 @media (max-width: 767px) {
-
     /*Header*/
     header .logo .title {
         font-size: 26px;
@@ -1089,7 +1154,7 @@ footer .social-medias img {
         background-image: url(../assets/main-img-mobile.jpg);
         background-size: 150%;
         background-position-y: -20px;
-        height: 60vh;
+        height: auto;
     }
 
     .main .main-text {
@@ -1134,6 +1199,18 @@ footer .social-medias img {
 
     .portfolio .container .subtitle {
         font-size: 20px;
+    }
+
+    /*Portfolio Design*/
+    .portfolio .design {
+        justify-content: center;
+        gap: 0px;
+        margin: 0;
+    }
+
+    .portfolio .design img {
+        max-width: 400px;
+        padding: 25px;
     }
 
     /*Quick Contact*/
@@ -1199,6 +1276,18 @@ footer .social-medias img {
     .about-page .services-tools {
         flex-direction: column;
         gap: 62px;
+    }
+
+    /*About Page Works*/
+    .about-page .works {
+        margin: 0;
+        gap: 25px;
+    }
+
+    .about-page .works .works-line {
+        flex-direction: column;
+        align-items: baseline;
+        gap: 6px;
     }
 
     /*About Page Quick Call*/
