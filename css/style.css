@@ -238,7 +238,6 @@ header #menu a.active {
 }
 
 /*Compro Ouro SJP*/
-
 .portfolio .section .compro-ouro-sjp::before {
     background-image: url(../assets/project-compro-ouro-sjp/container-bg.jpg);
 }
