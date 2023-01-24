@@ -17,7 +17,6 @@ body {
 }
 
 /*Header*/
-
 header {
     z-index: 999;
     display: flex;
@@ -207,7 +206,7 @@ header #menu a.active {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 50px;
-    margin: 28px 0;
+    margin: 36px 0;
 }
 
 .portfolio .section .container {
@@ -245,6 +244,33 @@ header #menu a.active {
 /*Restaurante*/
 .portfolio .section .restaurante::before {
     background-image: url(../assets/project-restaurante/container-bg.jpg);
+}
+
+/*Landing Page*/
+.portfolio .section .landing-page::before {
+    background-image: url(../assets/project-landing-page/container-bg.jpg);
+}
+
+.portfolio .section .container .new {
+    content: "";
+    background-color: transparent;
+    border-radius: 50%;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFF;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    transition: 300ms ease-in-out;
+}
+
+.portfolio .section .container:hover .new {
+    border: 4px solid #FFF;
 }
 
 .portfolio .container .year {
@@ -324,7 +350,6 @@ header #menu a.active {
 }
 
 /*Projects Page*/
-
 .project-page {
     display: flex;
     flex-direction: column;
@@ -369,7 +394,8 @@ header #menu a.active {
     padding-bottom: 15px;
 }
 
-.project .right .github, .project .right .website {
+.project .right .github,
+.project .right .website {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -722,9 +748,7 @@ footer .social-medias img {
 }
 
 /*Responsive PC*/
-
 @media screen and (min-width:1024px) {
-
     /*Header*/
     header #menu a::after {
         content: "";
@@ -749,12 +773,12 @@ footer .social-medias img {
     .mail-btn:hover {
         width: 250px;
     }
-    
+
     .mail-btn:hover p {
         visibility: visible;
         opacity: 1;
     }
-    
+
     .mail-btn:hover img {
         content: url(../assets/mail-open-icon.svg);
     }
@@ -788,12 +812,12 @@ footer .social-medias img {
     .portfolio .design img:hover {
         transform: scale(1.03);
     }
-    
+
     @keyframes call-action {
         from {
             left: -50px;
         }
-    
+
         to {
             left: 0px;
         }
@@ -810,7 +834,7 @@ footer .social-medias img {
         bottom: 0;
         transition: 0.4s;
     }
-    
+
     .quick-call .title:hover::after {
         width: 100%;
     }
@@ -824,7 +848,7 @@ footer .social-medias img {
     .about-page .works .works-line .black {
         width: 60%;
     }
-    
+
     .about-page .works .works-line .last {
         text-align: end;
         width: 50%;
@@ -838,7 +862,6 @@ footer .social-medias img {
 }
 
 /*Responsive Tablet*/
-
 @media screen and (min-width: 767px) and (max-width: 1024px) {
     /*Header*/
     header #menu a {
@@ -901,7 +924,7 @@ footer .social-medias img {
     }
 
     /*Quick Contact*/
-    .quick-call .subtitle{
+    .quick-call .subtitle {
         font-size: 20px;
     }
 
@@ -942,7 +965,7 @@ footer .social-medias img {
         color: #000;
         width: 50%;
     }
-    
+
     .about-page .works .works-line .last {
         text-align: end;
         width: 50%;
@@ -993,7 +1016,7 @@ footer .social-medias img {
     }
 
     /*Projects Page*/
-    .project-page .subtitle{
+    .project-page .subtitle {
         font-size: 22px;
     }
 
@@ -1017,7 +1040,7 @@ footer .social-medias img {
     .project-page .project-main .right {
         width: 100%;
     }
- 
+
     /*Project Page Testimonial*/
     .project-page .testimonial {
         width: 80%;
@@ -1029,6 +1052,7 @@ footer .social-medias img {
         flex-wrap: wrap;
         justify-content: space-between;
     }
+
     footer .grid {
         width: 30%;
     }
@@ -1036,24 +1060,28 @@ footer .social-medias img {
     footer .contact {
         margin-top: 28px;
     }
+
     footer .contact .text {
         font-size: 16px;
     }
+
     footer .text {
         font-size: 18px;
     }
+
     footer .copyright {
         width: 100%;
         margin-top: 40px;
     }
+
     footer .principal-copyright {
         display: none;
     }
 }
 
 /*Responsive Smartphone*/
-
 @media (max-width: 767px) {
+
     /*Header*/
     header .logo .title {
         font-size: 26px;
@@ -1261,6 +1289,7 @@ footer .social-medias img {
     .about-page {
         margin: 72px 28px;
     }
+
     /*About Page About Me*/
     .about-page .about-me {
         margin-top: 120px;
@@ -1344,58 +1373,74 @@ footer .social-medias img {
         padding: 10px;
         margin-bottom: 82px;
     }
+
     footer .logo {
         align-items: center;
         margin-bottom: 10px;
     }
+
     footer .title {
         font-size: 22px;
     }
+
     footer .text {
         font-size: 18px;
     }
+
     footer .principal .logo .title {
         font-size: 34px;
     }
+
     footer .principal .logo .subtitle {
         font-size: 18px;
     }
+
     footer .principal-copyright {
         display: none;
     }
+
     footer .social-medias {
         display: flex;
         align-items: center;
         justify-content: center;
     }
+
     footer .social-medias img {
         width: 40px;
         margin: 0 5px;
     }
+
     footer .social-medias .title {
         display: none;
     }
+
     footer .grid {
         width: 100%;
         margin: 20px 0;
         align-items: center;
     }
+
     footer .contact {
         align-items: flex-start;
     }
+
     footer .contact .text {
         font-size: 18px;
     }
+
     footer .contact img {
         width: 30px;
     }
+
     footer .contact p {
         font-size: 18px;
     }
+
     footer .copyright {
         margin-top: 30px;
         text-align: right;
     }
+
     footer .copyright .text {
         font-size: 16px;
     }
