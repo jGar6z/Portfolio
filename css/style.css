@@ -1081,7 +1081,6 @@ footer .social-medias img {
 
 /*Responsive Smartphone*/
 @media (max-width: 767px) {
-
     /*Header*/
     header .logo .title {
         font-size: 26px;
@@ -1214,6 +1213,10 @@ footer .social-medias img {
         width: calc(100vw - 56px);
         height: 480px;
         padding: 30px;
+    }
+
+    .portfolio .section .container.empty {
+        display: none;
     }
 
     .portfolio .section .container::before {
