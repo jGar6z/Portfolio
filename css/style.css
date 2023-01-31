@@ -232,10 +232,6 @@ header #menu a.active {
     transition: 0.5s ease-in-out;
 }
 
-.portfolio .section .container:hover::before {
-    filter: blur(3px) brightness(40%);
-}
-
 /*Compro Ouro SJP*/
 .portfolio .section .compro-ouro-sjp::before {
     background-image: url(../assets/project-compro-ouro-sjp/container-bg.jpg);
@@ -249,6 +245,29 @@ header #menu a.active {
 /*Landing Page*/
 .portfolio .section .landing-page::before {
     background-image: url(../assets/project-landing-page/container-bg.jpg);
+}
+
+/*Adote.*/
+.portfolio .section .adote::before {
+    background-image: url(../assets/project-adote/container-bg.jpg);
+}
+
+.portfolio .section .container .new {
+    content: "";
+    background-color: transparent;
+    border-radius: 50%;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFF;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    transition: 300ms ease-in-out;
 }
 
 .portfolio .container .year {
@@ -779,6 +798,14 @@ footer .social-medias img {
     }
 
     /*Portfolio*/
+    .portfolio .section .container:hover::before {
+        filter: blur(3px) brightness(40%);
+    }
+
+    .portfolio .section .container:hover .new {
+        border: 3px solid #FFF;
+    }
+
     .portfolio .container:hover .call-action {
         opacity: 1;
         animation: call-action 1s;
@@ -880,13 +907,33 @@ footer .social-medias img {
         margin-top: 72px;
     }
 
+    .portfolio .section {
+        gap: 25px;
+    }
+
     .portfolio .section .container {
-        width: 320px;
+        width: 340px;
         height: 420px;
+    }
+
+    .portfolio .section .container .new {
+        border: 2px solid #FFF;
+        font-size: 16px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .portfolio .section .container .title {
+        font-size: 32px;
+    }
+
+    .portfolio .section .container .subtitle {
+        font-size: 18px;
     }
 
     .portfolio .section .container::before {
         background-size: contain;
+        filter: brightness(60%);
     }
 
     /*Portfolio Design*/
@@ -1185,6 +1232,7 @@ footer .social-medias img {
 
     .portfolio .section {
         flex-direction: column;
+        gap: 36px;
     }
 
     .portfolio .section .container {
@@ -1199,28 +1247,14 @@ footer .social-medias img {
 
     .portfolio .section .container::before {
         background-size: contain;
+        filter: brightness(60%);
     }
 
     .portfolio .section .container .new {
-        content: "";
-        background-color: transparent;
-        border-radius: 50%;
-        font-weight: 500;
+        border: 2px solid #FFF;
         font-size: 16px;
-        color: #FFF;
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: 30px;
-        right: 30px;
-        transition: 300ms ease-in-out;
-    }
-    
-    .portfolio .section .container:hover .new {
-        border: 4px solid #FFF;
+        width: 50px;
+        height: 50px;
     }
 
     .portfolio .container .title {
