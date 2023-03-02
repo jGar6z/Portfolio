@@ -138,8 +138,8 @@ header #menu a.active {
 }
 
 .scroll-btn img {
-    height: 20px;
     width: 20px;
+    height: 20px;
 }
 
 /*Main Content*/
@@ -252,6 +252,11 @@ header #menu a.active {
     background-image: url(../assets/project-adote/container-bg.jpg);
 }
 
+/*Cultivar*/
+.portfolio .section .cultivar::before {
+    background-image: url(../assets/project-cultivar/container-bg.jpg);
+}
+
 .portfolio .section .container .new {
     content: "";
     background-color: transparent;
@@ -286,6 +291,7 @@ header #menu a.active {
     color: #fff;
     font-weight: 500;
     font-size: 22px;
+    letter-spacing: normal;
 }
 
 .portfolio .container a {
@@ -360,14 +366,6 @@ header #menu a.active {
     gap: 50px;
 }
 
-.project .left {
-    width: 40%;
-}
-
-.project .left .text {
-    color: #000;
-}
-
 .project .title {
     padding-top: 0;
     margin-bottom: -15px;
@@ -382,6 +380,16 @@ header #menu a.active {
     padding: 4px 0;
 }
 
+/*Project Page Left*/
+.project .left {
+    width: 40%;
+}
+
+.project .left .text {
+    color: #000;
+}
+
+/*Project Page Right*/
 .project .right {
     width: 50%;
     text-align: justify;
@@ -391,32 +399,31 @@ header #menu a.active {
     padding-bottom: 15px;
 }
 
-.project .right .github,
-.project .right .website {
+.project .right .visit {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
 }
 
-.project .right .website .title {
-    position: relative;
-}
-
-.project .right .call {
+.project .visit .link {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 15px;
-    margin-top: 10px;
+    gap: 10px;
+    position: relative;
 }
 
-.project .right .call img {
-    width: 50px;
+.project .link .title {
+    font-size: 32px;
 }
 
-.project .right .call .title {
-    font-size: 28px;
+.project .visit .link .link-open {
+    width: 26px;
+}
+
+.project .visit .link .link-logo {
+    width: 42px;
 }
 
 /*Project Page Images*/
@@ -430,6 +437,30 @@ header #menu a.active {
 
 .project-page .images img {
     width: 100%;
+    box-shadow: 0 0 2px #878a8f;
+}
+
+/*Project Page Download*/
+.project-page .download {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-page .download .download-div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.project-page .download-div .title {
+    font-size: 36px;
+}
+
+.project-page .download-div img {
+    width: 34px;
 }
 
 /*Project Page Testimonial*/
@@ -445,6 +476,7 @@ header #menu a.active {
     font-size: 28px;
 }
 
+/*Project Page Quick Call*/
 .project-page .quick-call {
     margin-bottom: 0;
     padding-top: 72px;
@@ -536,7 +568,6 @@ header #menu a.active {
 }
 
 /*Contact Page*/
-
 .contact-main {
     display: flex;
     flex-direction: row;
@@ -544,7 +575,10 @@ header #menu a.active {
     margin: 132px 62px;
 }
 
-/*Contact Page Left Side*/
+/*Contact Page Left*/
+.contact-main .left {
+    width: 40%;
+}
 
 .contact-main .left .subtitle {
     font-size: 18px;
@@ -552,10 +586,6 @@ header #menu a.active {
 
 .contact-main .left .title {
     font-size: 38px;
-}
-
-.contact-main .left {
-    width: 40%;
 }
 
 .contact-main .social-medias img {
@@ -568,8 +598,18 @@ header #menu a.active {
     filter: invert(30%);
 }
 
-/*Contact Page Right Side*/
+.contact-main .left .contact-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
 
+.contact-main .contact-info img {
+    width: 26px;
+}
+
+/*Contact Page Right*/
 .contact-main .right {
     width: 55%;
 }
@@ -661,14 +701,19 @@ header #menu a.active {
 }
 
 /*Footer*/
-
 footer {
+    display: flex;
+    flex-direction: column;
+    margin: 72px 28px;
+}
+
+footer .footer-main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     border-top: 0.6px solid #878a8f;
-    margin: 72px 28px;
     padding: 28px;
+    gap: 20px;
 }
 
 footer .title {
@@ -713,6 +758,11 @@ footer .principal .logo .title {
     font-size: 28px;
 }
 
+footer .contact .text {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
 footer .copyright {
     margin-top: 15px;
     display: none;
@@ -722,19 +772,14 @@ footer .copyright .text {
     font-size: 14px;
 }
 
-footer .contact .text {
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.contact-info {
+footer .contact-info {
     display: flex;
     flex-direction: row;
     gap: 10px;
     margin-top: 10px;
 }
 
-.contact-info img {
+footer .contact-info img {
     width: 25px;
 }
 
@@ -750,6 +795,7 @@ footer .social-medias img {
     header #menu a::after {
         content: "";
         position: absolute;
+        border-radius: 25px;
         background-color: #000;
         height: 2px;
         width: 0;
@@ -784,6 +830,7 @@ footer .social-medias img {
     .main-text a::after {
         content: "";
         position: absolute;
+        border-radius: 25px;
         height: 2px;
         bottom: -5px;
         width: 100%;
@@ -828,9 +875,44 @@ footer .social-medias img {
         }
     }
 
+    /*View Website*/
+    .project .visit .link::after {
+        content: "";
+        position: absolute;
+        border-radius: 25px;
+        width: 0;
+        height: 3px;
+        bottom: -5px;
+        left: 0;
+        background-color: #000;
+        transition: 0.4s;
+    }
+
+    .project .right .visit .link:hover::after {
+        width: 100%;
+    }
+
+    /*Download*/
+    .download .download-div::after {
+        content: "";
+        position: absolute;
+        background-color: #000;
+        border-radius: 25px;
+        height: 3.5px;
+        width: 0;
+        left: 0;
+        bottom: -5px;
+        transition: 0.4s;
+    }
+
+    .download .download-div:hover::after {
+        width: 100%;
+    }
+
     /*Quick Contact*/
     .quick-call .title::after {
         content: "";
+        border-radius: 25px;
         position: absolute;
         background-color: #000;
         height: 5px;
@@ -1000,6 +1082,7 @@ footer .social-medias img {
     .contact-main {
         flex-direction: column;
         gap: 50px;
+        margin: 130px 28px 0 28px;
     }
 
     .contact-main .subtitle {
@@ -1073,9 +1156,15 @@ footer .social-medias img {
     }
 
     /*Footer*/
-    footer {
+    footer .footer-main {
         flex-wrap: wrap;
         justify-content: space-between;
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    footer .principal-copyright {
+        display: none;
     }
 
     footer .grid {
@@ -1090,17 +1179,13 @@ footer .social-medias img {
         font-size: 16px;
     }
 
+    footer .copyright {
+        margin-top: 30px;
+        display: block;
+    }
+
     footer .text {
         font-size: 18px;
-    }
-
-    footer .copyright {
-        width: 100%;
-        margin-top: 40px;
-    }
-
-    footer .principal-copyright {
-        display: none;
     }
 }
 
@@ -1291,7 +1376,7 @@ footer .social-medias img {
         font-size: 32px;
     }
 
-    /*Projects Page*/
+    /*Project Page*/
     .project-page {
         margin: 72px 28px;
     }
@@ -1301,6 +1386,7 @@ footer .social-medias img {
         flex-direction: column;
     }
 
+    /*Project Page Left*/
     .project-page .project-main .left {
         width: 100%;
     }
@@ -1309,8 +1395,21 @@ footer .social-medias img {
         font-size: 18px;
     }
 
+    /*Project Page Right*/
     .project-page .project-main .right {
         width: 100%;
+    }
+
+    .project-page .visit .subtitle {
+        font-size: 16px;
+    }
+
+    .project-page .visit .link .title {
+        font-size: 22px;
+    }
+
+    .project-page .visit .link ion-icon {
+        font-size: 20px;
     }
 
     /*Project Page Testimonial*/
@@ -1392,7 +1491,7 @@ footer .social-medias img {
 
     .contact-main .right .section {
         flex-direction: column;
-        padding: 10px;
+        padding: 5px;
         gap: 10px;
     }
 
@@ -1406,9 +1505,13 @@ footer .social-medias img {
 
     /*Footer*/
     footer {
+        margin-bottom: 82px;
+    }
+
+    footer .footer-main {
         flex-direction: column;
         padding: 10px;
-        margin-bottom: 82px;
+        gap: 5px;
     }
 
     footer .logo {
@@ -1457,6 +1560,10 @@ footer .social-medias img {
         align-items: center;
     }
 
+    footer .grid .text {
+        font-size: 18px;
+    }
+
     footer .contact {
         align-items: flex-start;
     }
@@ -1475,7 +1582,7 @@ footer .social-medias img {
 
     footer .copyright {
         margin-top: 30px;
-        text-align: right;
+        display: block;
     }
 
     footer .copyright .text {

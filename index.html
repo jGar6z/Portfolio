@@ -2,10 +2,11 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
         <link rel="stylesheet" href="css/style.css">
         <link rel="icon" href="assets/logo-tab.png">
-        <!--Add metatags-->
         <title>Portfólio | José Garcês - Software Developer & UI Designer</title>
     </head>
 
@@ -40,7 +41,9 @@
             </a>
 
             <!--Back to Top Button-->
-            <button class="scroll-btn" id="scrollTopBtn" title="Ir Para o Topo" onclick="toTopFunction()"><img src="assets/scroll-btn-arrow.svg" alt="scroll-btn-arrow.svg"></button>
+            <button class="scroll-btn" id="scrollTopBtn" title="Ir Para o Topo" onclick="toTopFunction()">
+                <img src="assets/scroll-btn-arrow.svg" alt="scroll-btn-arrow.svg">
+            </button>
 
             <!--Main Content-->
             <section class="main">
@@ -63,12 +66,13 @@
                     <h3 class="subtitle">PROJETOS E ESTUDOS DE CASO</h3>
                     <h1 class="title">Desenvolvimento Web</h1>
                     <div class="section">
-                        <!--Adoção de Cachorros-->
-                        <a href="project/adote.html">
-                            <div class="container adote">
+                        <!--Cultivar Pulverizações-->
+                        <a href="project/cultivar.html">
+                            <div class="container cultivar">
                                 <div class="new">New</div>
                                 <h3 class="year">2 0 2 3</h3>
-                                <h1 class="title">Adote.</h1>
+                                <h1 class="title">Cultivar Pulverizações</h1>
+                                <h2 class="subtitle">Landing Page Responsiva</h2>
                                 <div class="call-action">
                                     <h4 class="text">Confira esse projeto</h4>
                                     <img src="assets/arrow-forward.svg" alt="arrow-forward.svg">
@@ -76,11 +80,12 @@
                             </div>
                         </a>
 
-                        <!--Landing Page-->
-                        <a href="project/landing-page.html">
-                            <div class="container landing-page">
+                        <!--Adote-->
+                        <a href="project/adote.html">
+                            <div class="container adote">
                                 <h3 class="year">2 0 2 3</h3>
-                                <h1 class="title">Landing Page</h1>
+                                <h1 class="title">Adote</h1>
+                                <h2 class="subtitle">Landing Page Responsiva</h2>
                                 <div class="call-action">
                                     <h4 class="text">Confira esse projeto</h4>
                                     <img src="assets/arrow-forward.svg" alt="arrow-forward.svg">
@@ -90,12 +95,12 @@
                     </div>
 
                     <div class="section">
-                        <!--Restaurante-->
-                        <a href="project/restaurante.html">
-                            <div class="container restaurante">
-                                <h3 class="year">2 0 2 2</h3>
-                                <h1 class="title">Restaurante</h1>
-                                <h2 class="subtitle">Design Responsivo</h2>
+                        <!--Landing Page-->
+                        <a href="project/landing-page.html">
+                            <div class="container landing-page">
+                                <h3 class="year">2 0 2 3</h3>
+                                <h1 class="title">E-classes</h1>
+                                <h2 class="subtitle">Landing Page Responsiva</h2>
                                 <div class="call-action">
                                     <h4 class="text">Confira esse projeto</h4>
                                     <img src="assets/arrow-forward.svg" alt="arrow-forward.svg">
@@ -103,12 +108,12 @@
                             </div>
                         </a>
 
-                        <!--Compro Ouro SJP-->
-                        <a href="project/compro-ouro-sjp.html">
-                            <div class="container compro-ouro-sjp">
+                        <!--Restaurante-->
+                        <a href="project/restaurante.html">
+                            <div class="container restaurante">
                                 <h3 class="year">2 0 2 2</h3>
-                                <h1 class="title">Compro Ouro SJP</h1>
-                                <h2 class="subtitle">Design Responsivo</h2>
+                                <h1 class="title">Restaurante</h1>
+                                <h2 class="subtitle">Website Responsivo</h2>
                                 <div class="call-action">
                                     <h4 class="text">Confira esse projeto</h4>
                                     <img src="assets/arrow-forward.svg" alt="arrow-forward.svg">
@@ -116,15 +121,21 @@
                             </div>
                         </a>
                     </div>
-                </section>
 
-                <!--UI Design Projects-->
-                <section>
-                    <h3 class="subtitle">UI & BRANDING DESIGNS</h3>
-                    <h1 class="title">UI Design</h1>
-                    </br>
-                    <h3 class="subtitle">Em breve...</h3>
-                    </br>
+                    <div class="section">
+                        <!--Compro Ouro SJP-->
+                        <a href="project/compro-ouro-sjp.html">
+                            <div class="container compro-ouro-sjp">
+                                <h3 class="year">2 0 2 2</h3>
+                                <h1 class="title">Compro Ouro SJP</h1>
+                                <h2 class="subtitle">Website Responsivo</h2>
+                                <div class="call-action">
+                                    <h4 class="text">Confira esse projeto</h4>
+                                    <img src="assets/arrow-forward.svg" alt="arrow-forward.svg">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </section>
 
                 <!--Photoshop Designs-->
@@ -151,60 +162,66 @@
             </div>
         </main>
 
+        <!--Script.js Reference-->
+        <script src="script.js"></script>
+
         <!--Footer-->
         <footer>
-            <div class="grid principal">
-                <a href="index.html">
-                    <div class="logo">
-                        <h1 class="title">José Garcês</h1>
-                        <h3 class="subtitle">DEVELOPER & UI DESIGNER</h3>
+            <div class="footer-main">
+                <div class="grid principal">
+                    <a href="index.html">
+                        <div class="logo">
+                            <h1 class="title">José Garcês</h1>
+                            <h3 class="subtitle">DEVELOPER & UI DESIGNER</h3>
+                        </div>
+                    </a>
+        
+                    <div class="social-medias">
+                        <h2 class="title">Siga-me nas redes sociais</h2>
+                        <a href="https://www.linkedin.com/in/garc%C3%AAs-neto/" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/linkedin-logo.svg" alt="linkedin-logo.svg">
+                        </a>
+                        <a href="https://github.com/jGar6z" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/github-logo.svg" alt="github-logo.svg">
+                        </a>
+                        <a href="https://www.instagram.com/jgar6_/" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/instagram-logo.svg" alt="instagram-logo.svg">
+                        </a>
                     </div>
-                </a>
-    
-                <div class="social-medias">
-                    <h2 class="title">Siga-me nas redes sociais</h2>
-                    <a href="https://www.linkedin.com/in/garc%C3%AAs-neto/" target="_blank" rel="noopener noferrer">
-                        <img src="assets/linkedin-logo.svg" alt="linkedin-logo.svg">
-                    </a>
-                    <a href="https://github.com/jGar6z" target="_blank" rel="noopener noferrer">
-                        <img src="assets/github-logo.svg" alt="github-logo.svg">
-                    </a>
-                    <a href="https://www.instagram.com/jgar6_/" target="_blank" rel="noopener noferrer">
-                        <img src="assets/instagram-logo.svg" alt="instagram-logo.svg">
-                    </a>
+        
+                    <div class="principal-copyright">
+                        <h4 class="text">© 2022 Todos os direitos reservados.</h4>
+                        <h4 class="text" style="color: #000;">José Garcês</h4>
+                    </div>
                 </div>
-    
-                <div class="principal-copyright">
-                    <h4 class="text">© 2022 Todos os direitos reservados.</h4>
-                    <h4 class="text" style="color: #000;">José Garcês</h4>
+        
+                <div class="grid">
+                    <h2 class="title">Últimos Projetos</h2>
+                    <a class="text hover" href="./project/cultivar.html">Cultivar Pulverizações</a>
+                    <a class="text hover" href="./project/adote.html">Adote</a>
+                    <a class="text hover" href="./project/landing-page.html">Landing Page</a>
+                    <a class="text hover" href="./project/restaurante.html">Restaurante</a>
+                    <a class="text hover" href="project/compro-ouro-sjp.html">Compro Ouro SJP</a>
                 </div>
-            </div>
-    
-            <div class="grid">
-                <h2 class="title">Últimos Projetos</h2>
-                <a class="text hover" href="./project/adote.html">Adoção de Cachorros</a>
-                <a class="text hover" href="./project/landing-page.html">Landing Page</a>
-                <a class="text hover" href="./project/restaurante.html">Restaurante</a>
-                <a class="text hover" href="project/compro-ouro-sjp.html">Compro Ouro SJP</a>
-            </div>
-    
-            <div class="grid">
-                <h2 class="title">Menu</h2>
-                <a class="text hover" href="index.html">Portfólio</a>
-                <a class="text hover" href="about.html">Sobre</a>
-                <a class="text hover" href="contact.html">Contatos</a>
-            </div>
-    
-            <div class="grid contact">
-                <h2 class="title">Informações de contato</h2>
-                <p class="text">Sinta-se a vontade para entrar em contato comigo a qualquer hora. Assim que receber sua mensagem retornarei o quanto antes.</p>
-                <div class="contact-info">
-                    <img src="assets/mail-icon.svg" alt="mail-icon.svg">
-                    <p>garces.neto2020@gmail.com</p>
+        
+                <div class="grid">
+                    <h2 class="title">Menu</h2>
+                    <a class="text hover" href="index.html">Portfólio</a>
+                    <a class="text hover" href="about.html">Sobre</a>
+                    <a class="text hover" href="contact.html">Contatos</a>
                 </div>
-                <div class="contact-info">
-                    <img src="assets/phone-icon.svg" alt="phone-icon.svg">
-                    <p>+55 (41) 99190 - 5209</p>
+        
+                <div class="grid contact">
+                    <h2 class="title">Informações de contato</h2>
+                    <p class="text">Sinta-se a vontade para entrar em contato comigo a qualquer hora. Assim que receber sua mensagem retornarei o quanto antes.</p>
+                    <div class="contact-info">
+                        <img src="assets/mail-icon.svg" alt="mail-icon.svg">
+                        <p>garces.neto2020@gmail.com</p>
+                    </div>
+                    <div class="contact-info">
+                        <img src="assets/phone-icon.svg" alt="phone-icon.svg">
+                        <p>+55 (41) 99190 - 5209</p>
+                    </div>
                 </div>
             </div>
 
@@ -213,8 +230,5 @@
                 <h4 class="text" style="color: #000;">José Garcês</h4>
             </div>
         </footer>
-        
-        <!--Script.js Reference-->
-        <script src="script.js"></script>
     </body>
 </html>
