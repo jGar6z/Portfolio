@@ -252,6 +252,11 @@ header #menu a.active {
     background-image: url(../assets/project-adote/container-bg.jpg);
 }
 
+/*Music*/
+.portfolio .section .music::before {
+    background-image: url(../assets/project-music/container-bg.jpg);
+}
+
 /*Cultivar*/
 .portfolio .section .cultivar::before {
     background-image: url(../assets/project-cultivar/container-bg.jpg);
